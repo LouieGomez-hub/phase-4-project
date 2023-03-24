@@ -6,6 +6,7 @@ class CreateTrips < ActiveRecord::Migration[7.0]
       t.integer :price
       t.float :rating
       t.text :description
+      t.belongs_to :user, null: false, foreign_key: true
 
       t.timestamps
     end
