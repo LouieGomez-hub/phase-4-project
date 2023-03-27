@@ -17,8 +17,6 @@ class TripsController < ApplicationController
             render json: trip, status: :created
         else
             render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :trip_id
-        else
-            render json: { error: user.errors.full_messages }, status: :unprocessable_entity
         end
     end
 

@@ -12,8 +12,6 @@ class ReviewsController < ApplicationController
             render json: review, status: :created
         else
             render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :review_id
-        else
-            render json: { error: user.errors.full_messages }, status: :unprocessable_entity
         end
     end
 
