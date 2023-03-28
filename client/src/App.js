@@ -1,28 +1,39 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import User from "./components/User";
+import Trips from "./components/Trips";
+import TripDetails from "./components/TripDetails";
+import Login from "./components/Login";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
-    fetch("/hello")
-      .then((r) => r.json())
-      .then((data) => setCount(data.count));
+    fetch("/me")
+      .then((res) => {
+        if(res.ok) {
+        res.json().then((user) => setUser({
+          id: user.id,
+          username: user.username
+        }));
+      }
+    });
   }, []);
 
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Switch>
-          <Route path="/testing">
-            <h1>Test Route</h1>
-          </Route>
-          <Route path="/">
-            <h1>Page Count: {count}</h1>
-          </Route>
-        </Switch>
+    <div className="App">
+      <div className="navbar">
+        <NavBar user={user} setUser={setUser} />
       </div>
-    </BrowserRouter>
+      { !user ? <Login onLogin={setUser} /> :
+      <Routes>
+        <Route path="/" element={<Trips />} />
+        <Route path="/account" element={<User />} />
+        <Route path="/trips/:id" element={<TripDetails user={user} />} />
+      </Routes>
+      }
+    </div>
   );
 }
 
