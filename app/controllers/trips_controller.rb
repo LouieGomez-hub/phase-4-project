@@ -20,6 +20,11 @@ class TripsController < ApplicationController
         end
     end
 
+    def reviews
+        reviews = Trip.find_by(id: params[:id]).reviews
+        render json: reviews
+    end
+
     private
 
     def trip_params
