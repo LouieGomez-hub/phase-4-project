@@ -13,11 +13,11 @@ function App() {
     fetch("/me")
       .then((res) => {
         if(res.ok) {
-        res.json().then((user) => setUser({
-          id: user.id,
-          username: user.username
-        }));
-      }
+          res.json().then((user) => setUser({
+            id: user.id,
+            username: user.username
+          }));
+        }
     });
   }, []);
 
