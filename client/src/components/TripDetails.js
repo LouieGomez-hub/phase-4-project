@@ -1,11 +1,11 @@
 import React from "react";
 
+function TripDetails() {
 
-
-
-
-
-
+    return (
+        <div></div>
+    );
+}
 
 
 
