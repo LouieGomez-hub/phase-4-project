@@ -20,7 +20,7 @@ function Signup({ onLogin }) {
             if(res.ok) {
                 res.json().then((user) => onLogin(user))
             } else {
-                res.json().then((err) => setError(err.errors))
+                res.json().then((err) => setErrors(err.errors))
             }
         })
     }
