@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "react-bootstrap/Navbar";
 
 function NavBar({ user, setUser }) {
 
@@ -18,9 +19,9 @@ function NavBar({ user, setUser }) {
         if(user) {
             return (
                 <div>
-                    <NavBar.Text className="current-user">
+                    <Navbar.Text className="current-user">
                         <b>{`@${user.username}`}</b>
-                    </NavBar.Text>
+                    </Navbar.Text>
                     <button variant="info" href="/account">My Account</button>
                     <button variant="outline-info" onClick={handleLogout}>Logout</button>
                 </div>
@@ -30,11 +31,11 @@ function NavBar({ user, setUser }) {
 
     return (
         <div>
-            <NavBar>
-                <NavBar.Collapse className="justify-content-end">
+            <Navbar>
+                <Navbar.Collapse className="justify-content-end">
                     {handleNavButtons}
-                </NavBar.Collapse>
-            </NavBar>
+                </Navbar.Collapse>
+            </Navbar>
         </div>
     );
 }
