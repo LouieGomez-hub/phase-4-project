@@ -1,20 +1,21 @@
 import React from "react";
 
-function UserReviews() {
+function UserReviews({ reviews }) {
+
+    function showReviews() {
+        reviews.map((review) => {
+            <button className="userReview" key={review.id} href={`/trips/${review.trip_id}`}>
+                <p>{review.comment.substr(0, 40)}...</p>
+            </button>
+        })
+    }
 
     return (
-        <div></div>
+        <div>
+            <h4>Your Reviews</h4>
+            {showReviews}
+        </div>
     );
 }
-
-
-
-
-
-
-
-
-
-
 
 export default UserReviews;
