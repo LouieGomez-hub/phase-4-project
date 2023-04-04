@@ -4,9 +4,11 @@ function UserReviews({ reviews }) {
 
     function showReviews() {
         reviews.map((review) => {
-            <button className="userReview" key={review.id} href={`/trips/${review.trip_id}`}>
-                <p>{review.comment.substr(0, 40)}...</p>
-            </button>
+            return (
+                <button className="userReview" key={review.id} href={`/trips/${review.trip_id}`}>
+                    <p>{review.comment.substr(0, 40)}...</p>
+                </button>
+            )
         })
     }
 
