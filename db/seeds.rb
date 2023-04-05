@@ -33,6 +33,7 @@ puts "Seeding database..."
 #           description: Faker::Lorem.paragraph(length: [50..200]),
 #           price: rand(100..1000),
 #           rating: rand(3..5.0).round(2),
+#           image_url: hotels.sample,
 #           user_id: User.all.sample.id
 #       )
 #  end
