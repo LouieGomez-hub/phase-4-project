@@ -33,7 +33,7 @@ function NavBar({ user, setUser }) {
         <div>
             <Navbar>
                 <Navbar.Collapse className="justify-content-end">
-                    {handleNavButtons}
+                    {handleNavButtons()}
                 </Navbar.Collapse>
             </Navbar>
         </div>
