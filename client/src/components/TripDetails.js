@@ -2,11 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function TripDetails({ trip }) {
-    const {id, name, location, rating, price} = trip;
+    const {id, name, location, rating, price, image_url} = trip;
 
     return (
         <div className="details" onClick={() => Link(`/trips/${id}`)}>
             <div className="trip-cards">
+                <image src={image_url} />
                 <article className="card-details">
                     <div>
                         <h2>{name}</h2>
