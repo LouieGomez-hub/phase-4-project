@@ -30,7 +30,7 @@ puts "Seeding database..."
        Trip.create(
            name: Faker::App.name,
            location: "#{Faker::Address.country}",
-           description: Faker::Lorem.paragraph(length: [50..200]),
+           description: Faker::Lorem.paragraph(),
            price: rand(100..1000),
            rating: rand(3..5.0).round(2),
            image_url: hotels.sample,
