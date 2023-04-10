@@ -1,10 +1,10 @@
 puts "Seeding database..."
 
 # # CREATE USERS
- User.create(username: "Louie", password: "tripbookerproj4")
+ User.create!(username: "Louie", password: "tripbookerproj4")
 
  20.times do
-   User.create(username: Faker::Name.first_name, password: "password")
+   User.create!(username: Faker::Name.first_name, password: "password")
  end
 
 # # CREATE TRIPS
@@ -27,7 +27,7 @@ puts "Seeding database..."
  ]
 
   15.times do
-       Trip.create(
+       Trip.create!(
            name: Faker::App.name,
            location: "#{Faker::Address.country}",
            description: Faker::Lorem.paragraph(),
@@ -42,7 +42,7 @@ puts "Seeding database..."
 
   Trip.all.each do |trip|
      rand(3..5) do
-        trip.reviews.create(
+        trip.reviews.create!(
            comment: Faker::Quote.matz,
            user_id: User.all.sample.id
          )
