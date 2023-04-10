@@ -7,6 +7,7 @@ function TripForm({ onAddTrip }) {
         location: "",
         description: "",
         price: "",
+        image_url: "",
         rating: 0
     })
     
@@ -25,7 +26,7 @@ function TripForm({ onAddTrip }) {
         .then((res) => {
             if(res.ok) {
                 onAddTrip(trips)
-                setTrips({name: "", location: "", description: "", price: "",})
+                setTrips({name: "", location: "", description: "", price: "", image_url: ""})
             } else {
                 res.json().then((err) => setErrors(err.errors));
             }
@@ -40,7 +41,7 @@ function TripForm({ onAddTrip }) {
 
     return (
         <div>
-            <form className="NewTrip" onSubmit={handleSubmit}>
+            <form className="NewTrip" onSubmit={(e) => handleSubmit(e)}>
                 <h4>Book Your Own Trip</h4>
                 <label>Hotel
                     <br/>
@@ -73,6 +74,17 @@ function TripForm({ onAddTrip }) {
                         placeholder="100"
                         onChange={(e) => handleChange(e)}
                     />  
+                </label>
+
+                <label>Image URL
+                    <br/>
+                    <input
+                        type="text"
+                        name="image_url"
+                        value={trips.image_url}
+                        placeholder="Paste URL here"
+                        onChange={(e) => handleChange(e)}
+                    />
                 </label>
 
                 <label htmlFor="description">Description
