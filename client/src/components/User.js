@@ -20,7 +20,7 @@ function User() {
       }, []);
     
     function handleAddTrip(newTrip) {
-        setTrips([...trips, newTrip])
+        setTrips((trips) => [...trips, newTrip])
     }
 
     return (
