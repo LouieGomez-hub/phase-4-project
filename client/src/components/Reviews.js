@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Reviews({ review, user, errors, onUpdateReview, onDeleteReview }) {
+function Reviews({ review, user, onUpdateReview, onDeleteReview }) {
     const [edit, setEdit] = useState(false);
     const [comment, setComment] = useState(review.comment);
 
