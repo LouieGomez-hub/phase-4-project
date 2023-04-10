@@ -3,8 +3,8 @@ import { Switch, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import User from "./components/User";
 import Trips from "./components/Trips";
-import TripDetails from "./components/TripDetails";
 import Login from "./components/Login";
+import TripView from "./components/TripView";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -30,7 +30,7 @@ function App() {
       <Switch>
         <Route path="/" element={<Trips />} />
         <Route path="/account" element={<User />} />
-        <Route path="/trips/:id" element={<TripDetails user={user} />} />
+        <Route path="/trips/:id" element={<TripView user={user} />} />
       </Switch>
       }
     </div>
