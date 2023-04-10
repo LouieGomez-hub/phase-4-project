@@ -1,5 +1,5 @@
 class ReviewSerializer < ActiveModel::Serializer
   attributes :id, :comment
-  belongs_to :user
-  belongs_to :trip
+  has_one :user, serializer: ReviewUserSerializer
+  has_one :trip, serializer: ReviewTripSerializer
 end
