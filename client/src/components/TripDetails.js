@@ -1,11 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import useNavigate from "react-router-dom";
 
 function TripDetails({ trip }) {
     const {id, name, location, rating, price, image_url} = trip;
+    const navigate = useNavigate();
 
     return (
-        <div className="details" onClick={() => Link(`/trips/${id}`)}>
+        <div className="details" onClick={() => navigate(`/trips/${id}`)}>
             <div className="trip-cards">
                 <image src={image_url} />
                 <article className="card-details">
