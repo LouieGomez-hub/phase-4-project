@@ -3,7 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import { useHistory } from "react-router-dom";
 
 function NavBar({ user, setUser }) {
-    let history = useHistory();
+    const history = useHistory();
 
     function handleLogout() {
         fetch("/logout", {
@@ -17,6 +17,10 @@ function NavBar({ user, setUser }) {
         .then(<redirect to="/" />)
     }
 
+    function routeToUserPage() {
+        history.push("/account")
+    }
+
     function handleNavButtons() {
         if(user) {
             return (
@@ -24,7 +28,7 @@ function NavBar({ user, setUser }) {
                     <Navbar.Text className="current-user">
                         <b>{`@${user.username}`}</b>
                     </Navbar.Text>
-                    <button onClick={() => history.push("/account")}>My Account</button>
+                    <button onClick={routeToUserPage}>My Account</button>
                     <button onClick={handleLogout}>Logout</button>
                 </div>
             );
