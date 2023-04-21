@@ -28,9 +28,9 @@ function App() {
       </div>
       { !user ? <Login onLogin={setUser} /> :
       <Switch>
-        <Route path="/" element={<Trips />} />
-        <Route path="/account" element={<User />} />
-        <Route path="/trips/:id" element={<TripView user={user} />} />
+        <Route exact path="/" element={<Trips />} />
+        <Route exact path="/account" element={<User />} />
+        <Route exact path="/trips/:id" element={<TripView user={user} />} />
       </Switch>
       }
     </div>
