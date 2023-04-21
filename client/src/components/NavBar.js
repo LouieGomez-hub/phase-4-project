@@ -1,7 +1,9 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
+import { useHistory } from "react-router-dom";
 
 function NavBar({ user, setUser }) {
+    let history = useHistory();
 
     function handleLogout() {
         fetch("/logout", {
@@ -22,7 +24,7 @@ function NavBar({ user, setUser }) {
                     <Navbar.Text className="current-user">
                         <b>{`@${user.username}`}</b>
                     </Navbar.Text>
-                    <button href="/account">My Account</button>
+                    <button onClick={() => history.push("/account")}>My Account</button>
                     <button onClick={handleLogout}>Logout</button>
                 </div>
             );
