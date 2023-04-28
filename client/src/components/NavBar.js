@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
+import { Link } from "react-router-dom";
 
 function NavBar({ user, setUser }) {
 
@@ -22,7 +23,7 @@ function NavBar({ user, setUser }) {
                     <Navbar.Text className="current-user">
                         <b>{`@${user.username}`}</b>
                     </Navbar.Text>
-                    <button href="/account">My Account</button>
+                    <Link to="/account">My Account</Link>
                     <button onClick={handleLogout}>Logout</button>
                 </div>
             );
