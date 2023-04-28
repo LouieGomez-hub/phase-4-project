@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import User from "./components/User";
 import Trips from "./components/Trips";
@@ -27,11 +27,11 @@ function App() {
         <NavBar user={user} setUser={setUser} />
       </div>
       { !user ? <Login onLogin={setUser} /> :
-      <Switch>
+      <Routes>
         <Route exact path="/" element={<Trips />} />
         <Route exact path="/account" element={<User />} />
         <Route exact path="/trips/:id" element={<TripView user={user} />} />
-      </Switch>
+      </Routes>
       }
     </div>
   );
