@@ -33,6 +33,7 @@ function LoginForm({ onLogin }) {
                     placeholder="Username"
                     onChange={(e) => setUsername(e.target.value)}
                 />
+                <br/>
                 <input
                     type="password"
                     value={password}
@@ -43,6 +44,7 @@ function LoginForm({ onLogin }) {
                     <span className="error-message">{error}</span>
                 </div> : null
                 }
+                <br/>
                 <button variant="info" type="submit">Login</button>
             </form>
         </div>

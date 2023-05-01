@@ -34,18 +34,21 @@ function Signup({ onLogin }) {
                     placeholder="Username"
                     onChange={(e) => setUsername(e.target.value)}
                 />
+                <br/>
                 <input
                     type="password"
                     value={password}
                     placeholder="Password"
                     onChange={(e) => setPassword(e.target.value)}
                 />
+                <br/>
                 <input
                     type="password"
                     value={password_confirmation}
                     placeholder="Confirm password"
                     onChange={(e) => setPasswordConfirmation(e.target.value)}
                 />
+                <br/>
                 {errors ? <div className="errorContainer">
                     {errors.map((err) => (
                      <span className="error-message" key={err}>{`Invalid: ${err}`}</span>   
