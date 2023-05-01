@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function TripForm({ onAddTrip }) {
-    const [errors, setErrors] = useState([]);
+    const [, setErrors] = useState([]);
     const [trips, setTrips] = useState({
         name: "",
         location: "",
@@ -99,12 +99,12 @@ function TripForm({ onAddTrip }) {
                     </textarea>      
                 </label>
 
-                <div className="errorContainer">
+                {/* <div className="errorContainer">
                     {errors.map((err) => (
                         <span className="error-message" key={err}>{`Invalid: ${err}`}</span>
                     ))
                     }
-                </div>
+                </div> */}
                 <button variant="warning" type="submit">Submit</button>
             </form>
         </div>
