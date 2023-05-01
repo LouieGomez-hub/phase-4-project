@@ -30,3 +30,12 @@ input {
 h1 {
   margin-bottom: 3%;
 }
+
+.trip-cards {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  border: 1px solid #dadada;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 5px;
+}
