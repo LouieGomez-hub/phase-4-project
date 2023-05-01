@@ -12,13 +12,13 @@ function TripDetails({ trip }) {
                 <article className="card-details">
                     <div>
                         <h2 className="card-name">{name} Hotel</h2>
-                        <h3>{location}</h3>
+                        <h3 className="card-locale">{location}</h3>
                         <br/>
-                        <h2>{`$${price}`} <span className="timeframe">night</span> </h2>
+                        <h2 className="card-price">{`$${price}`} <span className="timeframe">per night</span> </h2>
                     </div>
                     <br/>
                     <div>
-                        <h2 className="rating">{rating ? '★'+ rating : "★ unrated"}</h2>
+                        <h2 className="rating">{rating ? '★ '+ rating : "★ unrated"}</h2>
                     </div>
                 </article>
             </div>
