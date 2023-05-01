@@ -53,7 +53,7 @@ function TripForm({ onAddTrip }) {
                         onChange={(e) => handleChange(e)}
                     />  
                 </label>
-
+                <br/>
                 <label>Location
                     <br/>
                     <input 
@@ -64,7 +64,7 @@ function TripForm({ onAddTrip }) {
                         onChange={(e) => handleChange(e)}
                     />  
                 </label>
-
+                    <br/>
                 <label>Price
                     <br/>
                     <input 
@@ -75,7 +75,7 @@ function TripForm({ onAddTrip }) {
                         onChange={(e) => handleChange(e)}
                     />  
                 </label>
-
+                    <br/>
                 <label>Image URL
                     <br/>
                     <input
@@ -86,7 +86,7 @@ function TripForm({ onAddTrip }) {
                         onChange={(e) => handleChange(e)}
                     />
                 </label>
-
+                    <br/>
                 <label htmlFor="description">Description
                     <br/>
                     <textarea 
