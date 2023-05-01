@@ -15,7 +15,7 @@ function UserReviews({ reviews }) {
     return (
         <div>
             <h4>Your Reviews</h4>
-            {showReviews}
+            {showReviews()}
         </div>
     );
 }

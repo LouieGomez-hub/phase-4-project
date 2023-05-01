@@ -13,7 +13,7 @@ function UserTrips({ trips }) {
     return (
         <div key="user-trips">
             <h4>Booked Trips</h4>
-            {tripsDisplay}
+            {tripsDisplay()}
         </div>
     );
 }
