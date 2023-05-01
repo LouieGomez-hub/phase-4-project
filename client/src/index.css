@@ -13,8 +13,8 @@ body {
 }
 
 .login-card {
-  width: 35rem;
-  height: 15rem;
+  width: 33rem;
+  height: 17rem;
   text-align: center;
   background-color: rgba(78, 79, 142, 0.892);
   border: ridge;
@@ -22,3 +22,11 @@ body {
   color: #dace83b5;
 }
 
+input {
+  width: 50%;
+  height: 17px;
+}
+
+h1 {
+  margin-bottom: 3%;
+}

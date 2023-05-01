@@ -40,11 +40,11 @@ function LoginForm({ onLogin }) {
                     placeholder="Password"
                     onChange={(e) => setPassword(e.target.value)}
                 />
+                <br/>
                 {error ? <div className="errorContainer">
                     <span className="error-message">{error}</span>
                 </div> : null
                 }
-                <br/>
                 <button variant="info" type="submit">Login</button>
             </form>
         </div>
