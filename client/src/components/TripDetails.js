@@ -8,7 +8,7 @@ function TripDetails({ trip }) {
         <div>
             <Link className="details" to={`/trips/${id}`}/>
             <div className="trip-cards">
-                <img src={image_url} />
+                <img src={image_url} alt=""/>
                 <article className="card-details">
                     <div>
                         <h2>{name}</h2>
