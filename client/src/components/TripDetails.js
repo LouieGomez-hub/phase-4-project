@@ -11,10 +11,12 @@ function TripDetails({ trip }) {
                 <img src={image_url} alt="hotel"/>
                 <article className="card-details">
                     <div>
-                        <h2>{name}</h2>
+                        <h2 className="card-name">{name} Hotel</h2>
                         <h3>{location}</h3>
+                        <br/>
                         <h2>{`$${price}`} <span className="timeframe">night</span> </h2>
-                    </div> 
+                    </div>
+                    <br/>
                     <div>
                         <h2 className="rating">{rating ? '★'+ rating : "★ unrated"}</h2>
                     </div>
