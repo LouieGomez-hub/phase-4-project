@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Reviews from "./Reviews";
-import { Tab } from "bootstrap";
+import { Tab } from "react-bootstrap";
 import { ListGroup } from "react-bootstrap";
 
 function TripView({ user }) {
