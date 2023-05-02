@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 function Reviews({ review, user, onUpdateReview, onDeleteReview }) {
     const [edit, setEdit] = useState(false);
-    const [comment, setComment] = useState(review.comment);
+    const [comment, setComment] = useState("");
 
     function editReview() {
         setEdit(!edit)
@@ -11,7 +11,7 @@ function Reviews({ review, user, onUpdateReview, onDeleteReview }) {
 
     return (
         <div className="review">
-            {user.id === review.user.id ? 
+            {user.id === user.id ? 
                 <div className="reviewBtn">
                     {!edit ?
                         <button variant="outline-info" onClick={() => {
@@ -30,7 +30,7 @@ function Reviews({ review, user, onUpdateReview, onDeleteReview }) {
                 </div> : null
             }
             <div>
-                {(edit && review.user.id === user.id) ? 
+                {(edit && user.id === user.id) ? 
                     <form className="reviewEdits">
                         <label htmlFor="comment"></label>
                         <input
@@ -41,10 +41,10 @@ function Reviews({ review, user, onUpdateReview, onDeleteReview }) {
                             onChange={(e) => setComment(e.target.value)}
                         />
                     </form>
-                    : <p>{review.comment}</p>
+                    : <p>{comment}</p>
                 }
                 <span className="reviewUser">
-                    <b>{`@${review.user.username}`}</b>
+                    <b>{`@${user.username}`}</b>
                 </span>
             </div>
         </div>
