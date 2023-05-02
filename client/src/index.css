@@ -78,3 +78,32 @@ span {
 .rating {
   color: rgba(210, 183, 25, 0.804);
 }
+
+.navInfo {
+  margin-left: 1340px;
+  margin-top: 5px;
+}
+
+.accbtn {
+  text-decoration: wavy;
+  border: thin solid rgba(0, 0, 0, 0.441);
+  background-color: rgba(255, 255, 255, 0.626);
+  font-size: 17px;
+  color: rgb(34, 36, 169);
+  font-family: 'Segoe UI';
+  border-right: 1px;
+  border-bottom: 1px;
+  padding-bottom: 1px;
+}
+
+.logout {
+  margin-left: 62px;
+  width: 90px;
+  background-color: rgba(255, 255, 255, 0.626);
+  font-size: 15px;
+  color: rgb(34, 36, 169);
+  font-family: 'Segoe UI';
+  border: thin solid rgba(0, 0, 0, 0.441);
+  border-right: 1px;
+  border-bottom: 1px;
+}

@@ -19,12 +19,13 @@ function NavBar({ user, setUser }) {
     function handleNavButtons() {
         if(user) {
             return (
-                <div>
+                <div className="navInfo">
                     <Navbar.Text className="current-user">
                         <b>{`@${user.username}`}</b>
                     </Navbar.Text>
-                    <Link to="/account">My Account</Link>
-                    <button onClick={handleLogout}>Logout</button>
+                    <Link className="accbtn" to="/account">My Account</Link>
+                    <br/>
+                    <button className="logout" onClick={handleLogout}>Logout</button>
                 </div>
             );
         }
