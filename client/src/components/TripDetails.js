@@ -6,9 +6,9 @@ function TripDetails({ trip }) {
 
     return (
         <div>
-            <Link className="details" to={`/trips/${id}`}/>
             <div className="trip-cards">
                 <img src={image_url} alt="hotel"/>
+                 <Link className="details" to={`/trips/${id}`}>View Hotel</Link>
                 <article className="card-details">
                     <div>
                         <h2 className="card-name">{name} Hotel</h2>
