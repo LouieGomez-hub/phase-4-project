@@ -97,7 +97,7 @@ span {
 }
 
 .logout {
-  margin-left: 62px;
+  margin-left: 67px;
   width: 90px;
   background-color: rgba(255, 255, 255, 0.626);
   font-size: 15px;
@@ -106,4 +106,10 @@ span {
   border: thin solid rgba(0, 0, 0, 0.441);
   border-right: 1px;
   border-bottom: 1px;
+}
+
+b {
+  font-style: italic;
+  font-family: Georgia;
+  font-size: 17px;
 }
