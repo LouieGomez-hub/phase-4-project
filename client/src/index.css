@@ -47,7 +47,7 @@ h1 {
   font-size: 40px;
   font-style: italic;
   font-family: Cambria;
-  margin-bottom: 20%;
+  margin-bottom: 2px;
   border-bottom: 1px solid black;
   padding-bottom: 2px;
 }
@@ -63,6 +63,7 @@ h2 {
 .card-price {
   font-size: 30px;
   font-family: serif;
+  margin-top: 2px;
 }
 
 span {
@@ -193,4 +194,14 @@ b {
   font-family: 'Segoe UI';
   border: none;
   text-shadow: 1px 1px 2px black;
+}
+
+.details {
+  color: rgb(103, 103, 103);
+  font-size: 20px;
+  text-decoration: none;
+  position: relative;
+  top: 1px;
+  left: 100px;
+  text-shadow: 1px 1px 1px rgb(32, 32, 32);
 }
