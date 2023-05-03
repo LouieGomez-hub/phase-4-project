@@ -8,7 +8,6 @@ function TripDetails({ trip }) {
         <div>
             <div className="trip-cards">
                 <img src={image_url} alt="hotel"/>
-                 <Link className="details" to={`/trips/${id}`}>View Hotel</Link>
                 <article className="card-details">
                     <div>
                         <h2 className="card-name">{name} Hotel</h2>
@@ -19,6 +18,7 @@ function TripDetails({ trip }) {
                     <br/>
                     <div>
                         <h2 className="rating">{rating ? '★ '+ rating : "★ unrated"}</h2>
+                        <Link className="details" to={`/trips/${id}`}>View Hotel</Link>
                     </div>
                 </article>
             </div>
