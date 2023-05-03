@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function TripForm({ onAddTrip }) {
-    const [errors, setErrors] = useState([]);
+    const [, setErrors] = useState([]);
     const [tripData, setTripData] = useState({
         name: "",
         location: "",
