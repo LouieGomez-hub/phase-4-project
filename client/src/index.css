@@ -34,7 +34,7 @@ h1 {
 .trip-cards {
   display: flex;
   flex-direction: row;
-  width: 87%;
+  width: 105%;
   height: 400px;
   box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.2);
   margin-top: 15px;
@@ -77,7 +77,7 @@ span {
 }
 
 .rating {
-  color: rgba(210, 183, 25, 0.804);
+  color: rgba(198, 172, 25, 0.804);
 }
 
 .navInfo {
@@ -201,7 +201,7 @@ b {
   font-size: 20px;
   text-decoration: none;
   position: relative;
-  top: 1px;
+  top: 25px;
   left: 100px;
   text-shadow: 1px 1px 1px rgb(32, 32, 32);
 }
