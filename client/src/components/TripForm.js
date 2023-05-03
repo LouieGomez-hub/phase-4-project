@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 function TripForm({ onAddTrip }) {
-    const [, setErrors] = useState([]);
-    const [trips, setTrips] = useState({
+    const [errors, setErrors] = useState([]);
+    const [tripData, setTripData] = useState({
         name: "",
         location: "",
         description: "",
@@ -16,17 +16,17 @@ function TripForm({ onAddTrip }) {
 
         setErrors([]);
 
-        fetch("/trips", {
+        fetch('/trips', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(trips)
+            body: JSON.stringify(tripData)
         })
         .then((res) => {
             if(res.ok) {
-                onAddTrip(trips)
-                setTrips({name: "", location: "", description: "", price: "", image_url: ""})
+                onAddTrip(tripData)
+                setTripData({name: "", location: "", description: "", price: "", image_url: ""})
             } else {
                 res.json().then((err) => setErrors(err.errors));
             }
@@ -34,21 +34,22 @@ function TripForm({ onAddTrip }) {
     }
 
     function handleChange(e) {
-        setTrips({...trips, 
+        setTripData({...tripData, 
             [e.target.name]: e.target.value
         })
     }
 
     return (
         <div>
-            <form className="NewTrip" onSubmit={(e) => handleSubmit(e)}>
+            <form id="NewTrip" onSubmit={(e) => handleSubmit(e)}>
                 <h4>Book Your Own Trip</h4>
                 <label>Hotel
                     <br/>
-                    <input 
+                    <input
+                        id="hotel"
                         type="text"
                         name="name"
-                        value={trips.name}
+                        value={tripData.name}
                         placeholder="Hotel"
                         onChange={(e) => handleChange(e)}
                     />  
@@ -57,9 +58,10 @@ function TripForm({ onAddTrip }) {
                 <label>Location
                     <br/>
                     <input 
+                        id="location"
                         type="text"
                         name="location"
-                        value={trips.location}
+                        value={tripData.location}
                         placeholder="Italy"
                         onChange={(e) => handleChange(e)}
                     />  
@@ -67,10 +69,11 @@ function TripForm({ onAddTrip }) {
                     <br/>
                 <label>Price
                     <br/>
-                    <input 
+                    <input
+                        id="price" 
                         type="number"
                         name="price"
-                        value={trips.price}
+                        value={tripData.price}
                         placeholder="100"
                         onChange={(e) => handleChange(e)}
                     />  
@@ -81,7 +84,7 @@ function TripForm({ onAddTrip }) {
                     <input
                         type="text"
                         name="image_url"
-                        value={trips.image_url}
+                        value={tripData.image_url}
                         placeholder="Paste URL here"
                         onChange={(e) => handleChange(e)}
                     />
@@ -89,10 +92,11 @@ function TripForm({ onAddTrip }) {
                     <br/>
                 <label htmlFor="description">Description
                     <br/>
-                    <textarea 
+                    <textarea
+                        id="description" 
                         type="textarea"
                         name="description"
-                        value={trips.description}
+                        value={tripData.description}
                         placeholder="Tell us more..."
                         onChange={(e) => handleChange(e)}
                     >
@@ -105,7 +109,7 @@ function TripForm({ onAddTrip }) {
                     ))
                     }
                 </div> */}
-                <button variant="warning" type="submit">Submit</button>
+                <button type="submit" value="Submit">Submit</button>
             </form>
         </div>
     );
