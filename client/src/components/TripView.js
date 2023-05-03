@@ -32,7 +32,7 @@ function TripView({ user }) {
                     </ListGroup>
                     <Tab.Pane eventKey="#information">
                         <b>Description</b>
-                        <p>{tripInfo.description}</p>
+                        <p className="describe">{tripInfo.description}</p>
                         <br/>
                         <div className="additional-info">
                             <div>
