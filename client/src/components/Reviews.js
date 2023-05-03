@@ -14,7 +14,7 @@ function Reviews({ review, user, onUpdateReview, onDeleteReview }) {
             {user.id === user.id ? 
                 <div className="reviewBtn">
                     {!edit ?
-                        <button variant="outline-info" onClick={() => {
+                        <button className="outline-info" onClick={() => {
                             setEdit(!edit)
                         }}
                         >Edit</button>
@@ -23,7 +23,7 @@ function Reviews({ review, user, onUpdateReview, onDeleteReview }) {
                     }
 
                     {!edit && (
-                        <button onClick={() => {onDeleteReview(review.id)}}>
+                        <button className="delete" onClick={() => {onDeleteReview(review.id)}}>
                             X
                         </button>
                     )}
