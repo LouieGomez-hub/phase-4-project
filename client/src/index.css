@@ -113,3 +113,84 @@ b {
   font-family: Georgia;
   font-size: 17px;
 }
+
+.infoContainer {
+  color: black;
+  gap: 5px;
+  display: flexbox;
+  justify-content: center;
+  width: 100%;
+  max-width: 50rem;
+  margin: auto;
+}
+
+.list-group-item {
+  color: rgb(130, 132, 255);
+  background: #222529db;
+  transition: 200ms;
+  text-decoration: none;
+  font-family: Arial;
+}
+
+.list-group-item.active {
+  color: #282c34;
+  border: none;
+  border-radius: 10px;
+  background-color: #61dafbbc;
+  z-index: 0;
+  transition: 200ms;
+  box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.2);
+}
+
+.additional-info {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: monospace
+}
+
+.additional-info > div {
+  padding: 1rem 3rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin: 5px;
+  background-color: #61dafbbc;
+}
+
+.additional-info > div p {
+  text-align: center;
+  color: rgb(101, 103, 217);
+  font-family: 'Segoe UI';
+  color: rgba(255, 255, 255, 0.848);
+}
+
+.describe {
+  font-family: Verdana;
+  font-size: 26px;
+}
+
+.outline-info {
+  margin-left: 750px;
+  width: 90px;
+  background-color: rgba(255, 255, 255, 0.626);
+  font-size: 20px;
+  color: rgb(34, 36, 169);
+  font-family: 'Segoe UI';
+  border: thin solid rgba(0, 0, 0, 0.441);
+  border-left: 1px;
+  border-top: 1px;
+}
+
+.delete {
+  position: relative; 
+  bottom: 1000px;
+  margin-left: 695px;
+  width: 90px;
+  background-color: transparent;
+  font-size: 23px;
+  color: rgb(206, 9, 9);
+  font-family: 'Segoe UI';
+  border: none;
+  text-shadow: 1px 1px 2px black;
+}
