@@ -205,3 +205,43 @@ b {
   left: 100px;
   text-shadow: 1px 1px 1px rgb(32, 32, 32);
 }
+
+#NewTrip {
+  background-color: rgba(78, 79, 142, 0.892);
+  border: double;
+  width: 25rem;
+  height: 30rem;
+  box-shadow: -5px 5px 9px rgba(0, 0, 0, 0.632);
+}
+
+.header {
+  font-size: 25px;
+  position: relative;
+  bottom: 20px;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgb(36, 36, 36);
+  font-family: Georgia;
+}
+
+label {
+  font-family: sans-serif;
+  font-size: 20px;
+  text-shadow: 1px 2px 2px rgb(36, 36, 36);
+  color: rgb(134, 136, 248);
+}
+
+.bookerSubmit {
+  position: relative;
+  width: 90px;
+  height: 25px;
+  font-size: 15px;
+  left: 150px;
+  top: 12px;
+  text-shadow: 1px 1px 2px rgb(33, 30, 30);
+  font-family: 'Segoe UI';
+  font-size: 15px;
+  background-color: rgba(255, 255, 255, 0.486);
+  box-shadow: 0px 0.5px 2px black;
+}
+
+

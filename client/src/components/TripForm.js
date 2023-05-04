@@ -42,66 +42,68 @@ function TripForm({ onAddTrip }) {
     return (
         <div>
             <form id="NewTrip" onSubmit={(e) => handleSubmit(e)}>
-                <h4>Book Your Own Trip</h4>
-                <label>Hotel
-                    <br/>
-                    <input
-                        id="hotel"
-                        type="text"
-                        name="name"
-                        value={tripData.name}
-                        placeholder="Hotel"
-                        onChange={(e) => handleChange(e)}
-                    />  
-                </label>
-                <br/>
-                <label>Location
-                    <br/>
-                    <input 
-                        id="location"
-                        type="text"
-                        name="location"
-                        value={tripData.location}
-                        placeholder="Italy"
-                        onChange={(e) => handleChange(e)}
-                    />  
-                </label>
-                    <br/>
-                <label>Price
-                    <br/>
-                    <input
-                        id="price" 
-                        type="number"
-                        name="price"
-                        value={tripData.price}
-                        placeholder="100"
-                        onChange={(e) => handleChange(e)}
-                    />  
-                </label>
-                    <br/>
-                <label>Image URL
-                    <br/>
-                    <input
-                        type="text"
-                        name="image_url"
-                        value={tripData.image_url}
-                        placeholder="Paste URL here"
-                        onChange={(e) => handleChange(e)}
-                    />
-                </label>
-                    <br/>
-                <label htmlFor="description">Description
-                    <br/>
-                    <textarea
-                        id="description" 
-                        type="textarea"
-                        name="description"
-                        value={tripData.description}
-                        placeholder="Tell us more..."
-                        onChange={(e) => handleChange(e)}
-                    >
-                    </textarea>      
-                </label>
+                <h4 className="header">Book Your Own Trip</h4>
+                <div className="formContainer">
+                    <label>Hotel
+                        <br/>
+                        <input
+                            id="hotel"
+                            type="text"
+                            name="name"
+                            value={tripData.name}
+                            placeholder="Hotel"
+                            onChange={(e) => handleChange(e)}
+                        />  
+                    </label>
+                        <br/>
+                    <label>Location
+                        <br/>
+                        <input 
+                            id="location"
+                            type="text"
+                            name="location"
+                            value={tripData.location}
+                            placeholder="Italy"
+                            onChange={(e) => handleChange(e)}
+                        />  
+                    </label>
+                        <br/>
+                    <label>Price
+                        <br/>
+                        <input
+                            id="price" 
+                            type="number"
+                            name="price"
+                            value={tripData.price}
+                            placeholder="100"
+                            onChange={(e) => handleChange(e)}
+                        />  
+                    </label>
+                        <br/>
+                    <label>Image URL
+                        <br/>
+                        <input
+                            type="text"
+                            name="image_url"
+                            value={tripData.image_url}
+                            placeholder="Paste URL here"
+                            onChange={(e) => handleChange(e)}
+                        />
+                    </label>
+                        <br/>
+                    <label htmlFor="description">Description
+                        <br/>
+                        <textarea
+                            id="description" 
+                            type="textarea"
+                            name="description"
+                            value={tripData.description}
+                            placeholder="Tell us more..."
+                            onChange={(e) => handleChange(e)}
+                        >
+                        </textarea>      
+                    </label>
+                </div>
 
                 {/* <div className="errorContainer">
                     {errors.map((err) => (
@@ -109,7 +111,7 @@ function TripForm({ onAddTrip }) {
                     ))
                     }
                 </div> */}
-                <button type="submit" value="Submit">Submit</button>
+                <button className="bookerSubmit" type="submit">Submit</button>
             </form>
         </div>
     );
